@@ -28,7 +28,7 @@ export default class InputRange extends React.Component {
       classNames: PropTypes.objectOf(PropTypes.string),
       disabled: PropTypes.bool,
       formatLabel: PropTypes.func,
-      showEndLabels: React.PropTypes.bool,      
+      showEndLabels: PropTypes.bool,
       maxValue: rangePropType,
       minValue: rangePropType,
       name: PropTypes.string,
@@ -622,7 +622,6 @@ export default class InputRange extends React.Component {
         onTouchStart={this.handleTouchStart}>
 
         {this.renderMinLabel()}
-
         <Track
           classNames={this.props.classNames}
           ref={(trackNode) => { this.trackNode = trackNode; }}
@@ -631,7 +630,6 @@ export default class InputRange extends React.Component {
 
           {this.renderSliders()}
         </Track>
-
         {this.renderMaxLabel()}
 
         {this.renderHiddenInputs()}
